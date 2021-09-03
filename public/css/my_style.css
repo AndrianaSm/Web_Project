@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body *{font-family:'Lucida Casual', 'Comic Sans MS';}
+body{
+    background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_496612468_2000138820009280460_336567.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    position: relative;
+    min-height: 100vh;
+  }
+main{
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+.bookImg{
+  border-radius: 50%;
+  height: 100px;
+  border: 2px solid brown;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top:80px;
+  padding: 10px;
+  background: rgba(196, 154, 134,0.5);
+}
+
+h1{
+  text-align: center;
+}
+
+#favImg {
+  top: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+#sercherBook{
+
+  border-radius: 30px 0px 0px 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+#searchBtn{
+
+
+  float: left;
+  border-radius: 0px 30px 30px 0px;
+  margin-bottom: 10px;
+  width: 20%;
+  padding: 10px;
+  background: rgba(196, 154, 134,0.5);
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+
+}
+
+span {
+  padding: 10px;
+
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 20px;
+}
+#results{
+  padding: 10px;
+  display: table;
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
+  background: rgba(196, 154, 134,0.5);
+
+}
+.favBtn {
+    color: black !important;
+  	text-transform: uppercase;
+    background: rgba(249, 247, 247, 0.0);
+  	padding: 20px;
+  	border: 1px solid brown !important;
+  	border-radius: 6px;
+  	display: inline-block;
+  	transition: all 0.3s ease 0s;
+}
+
+.favBtn:hover {
+  color: #494949 !important;
+	border-radius: 50px;
+	border-color: #494949 !important;
+	transition: all 0.3s ease 0s;
+}
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#myTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(249, 247, 247, 0.0);
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border: 2px solid brown;
+  border-radius: 6px;
+}
+
+#myTopBtn:hover {
+  background-color:rgba(249, 247, 247, 0.0);
+}
+
+#go_to_search{
+  background-color: rgba(249, 247, 247, 0.0);
+  color: black;
+  padding: 15px;
+  border: 2px solid brown;
+  border-radius: 6px;
+  top: 20px;
+  position: absolute;
+  right: 20px;
+}
